@@ -10,7 +10,7 @@ class BannerCounterEntity
     private $userAgent;
     private $viewDate;
     private $pageUrl;
-    private $viewsCount;
+    private $viewsCount = 1;
 
     public function getId()
     {
@@ -62,12 +62,12 @@ class BannerCounterEntity
         $this->pageUrl = $pageUrl;
     }
 
-    public function getViewsCount()
+    public function getViewsCount(): int
     {
         return $this->viewsCount;
     }
 
-    public function setViewsCount($viewsCount): void
+    public function setViewsCount(int $viewsCount): void
     {
         $this->viewsCount = $viewsCount;
     }
