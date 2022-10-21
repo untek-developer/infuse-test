@@ -10,4 +10,4 @@ header('Content-Type: image/jpeg');
 readfile($bannerFile);
 
 $bannerCounterService = new BannerCounterService(new BannerCounterRepository());
-$bannerCounterService->increment($_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT'], $_SERVER['HTTP_REFERER']);
+$bannerCounterService->saveView($_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT'], $_SERVER['HTTP_REFERER']);

@@ -16,7 +16,7 @@ class BannerCounterService
         $this->bannerCounterRepository = $bannerCounterRepository;
     }
 
-    public function increment(string $ipAddress, string $userAgent, string $pageUrl): void
+    public function saveView(string $ipAddress, string $userAgent, string $pageUrl): void
     {
         try {
             $counterEntity = $this->bannerCounterRepository->findOneUnique($ipAddress, $userAgent, $pageUrl);
