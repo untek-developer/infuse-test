@@ -1,0 +1,11 @@
+{
+    "name": "infuse/test-project",
+    "license": "proprietary",
+    "description": "Test task from infuse company",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
